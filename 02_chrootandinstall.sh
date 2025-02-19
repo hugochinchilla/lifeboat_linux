@@ -7,7 +7,7 @@ nameserver 8.8.4.4
 EOF
 
 
-echo "$HOSTNAME" >> build/alpine-minirootfs/etc/hostname
+echo "$HOSTNAME" > build/alpine-minirootfs/etc/hostname
 echo "127.0.0.1     $HOSTNAME   $HOSTNAME" >> build/alpine-minirootfs/etc/hosts
 
 cat > build/alpine-minirootfs/mk.sh << EOF
