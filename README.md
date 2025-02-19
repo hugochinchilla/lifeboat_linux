@@ -29,6 +29,7 @@ Networking is untested.
 **What's included?:**
 
 - parted
+- efibootmgr
 - filesystems: ext4, ext3, dos.
 - lvm2
 - e2fsprogs
