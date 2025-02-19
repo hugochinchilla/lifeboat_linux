@@ -104,7 +104,6 @@ echo "----------------------------------------------------"
 echo -e "$(eval $DATE_CMD)  Copying kernel modules in root filesystem\n"
 nice -19 make -s modules_install
 echo -e "$(eval $DATE_CMD) Uncompressed root filesystem size WITH kernel modules: $(du -sh $DESTDIR | cut -f1)\n"
-cd $(pwd)/../$KERNELPATH
 
 
 # Creating modules.dep
@@ -125,7 +124,6 @@ nice -19 make -s -j$THREADS
 ##########################
 
 TARGET_FILE=$(realpath ../../dist/LifeboatLinux.efi)
-echo $(pwd)
 cp arch/x86/boot/bzImage $TARGET_FILE
 echo "----------------------------------------------------"
 echo -e "\n$(eval $DATE_CMD) Builded successfully: $TARGET_FILE\n"
