@@ -4,6 +4,7 @@ Live linux distro combined in one ~35MB file. Runs as a EFI binary so it should 
 
 <img width="256px" alt="One File Linux" src="icon.png" />
 
+**Download:** https://github.com/hugochinchilla/lifeboat_linux/releases
 
 ## Motivation
 
