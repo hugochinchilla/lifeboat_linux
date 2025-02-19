@@ -16,3 +16,12 @@ I was inspired by [OneFileLinux](https://github.com/zhovner/OneFileLinux) to cre
 This distro can be used to access your filesystem and perform basic tasks as edit config files. It can be also handy to resize partitions.
 
 Networking is untested.
+
+
+## Building
+
+```
+make build
+```
+
+Then look in dist folder for `LifeboatLinux.efi`
