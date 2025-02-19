@@ -122,7 +122,9 @@ nice -19 make -s -j$THREADS
 # Get builded file
 ##########################
 
-cp arch/x86/boot/bzImage ../dist/LifeboatLinux.efi
+TARGET_FILE=$(realpath ../../dist/LifeboatLinux.efi)
+echo $(pwd)
+cp arch/x86/boot/bzImage $TARGET_FILE
 echo "----------------------------------------------------"
-echo -e "\n$(eval $DATE_CMD) Builded successfully: $(pwd)/../dist/LifeboatLinux.efi\n"
-echo -e "File size: $(du -sh $(pwd)/../dist/LifeboatLinux.efi | cut -f1)\n"
+echo -e "\n$(eval $DATE_CMD) Builded successfully: $TARGET_FILE\n"
+echo -e "File size: $(du -sh $TARGET_FILE | cut -f1)\n"
