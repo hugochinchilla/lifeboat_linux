@@ -79,8 +79,10 @@ cd $KERNELPATH
 echo "----------------------------------------------------"
 echo -e "$(eval $DATE_CMD) Generating default config...\n"
 nice -19 make defconfig
+echo "CONFIG_INITRAMFS_ROOT_UID=$(id -u)" >> ../config.initramfs_root
+echo "CONFIG_INITRAMFS_ROOT_GID=$(id -g)" >> ../config.initramfs_root
 echo -e "$(eval $DATE_CMD) Customizing kernel config...\n"
-nice -19 ./scripts/kconfig/merge_config.sh .config ../../zfiles/config.minimal
+nice -19 ./scripts/kconfig/merge_config.sh .config ../config.initramfs_root ../../zfiles/config.minimal
 
 ##########################
 # Bulding kernel
