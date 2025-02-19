@@ -2,7 +2,7 @@
 
 Live linux distro combined in one ~35MB file. Runs as a EFI binary so it should run on any UEFI computer (PC or Mac) without installation. Just copy one file to EFI system partition and boot.
 
-<img width=512 alt="One File Linux" src="FoxBuild/icon.png" />
+<img width=512 alt="One File Linux" src="icon.png" />
 
 
 ## Motivation
