@@ -27,5 +27,5 @@ EOF
 
 chmod +x build/alpine-minirootfs/mk.sh
 
-unshare -mr chroot build/alpine-minirootfs /bin/ash /mk.sh
+chroot build/alpine-minirootfs /bin/ash /mk.sh
 rm build/alpine-minirootfs/mk.sh

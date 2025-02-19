@@ -42,7 +42,7 @@ Networking is untested.
 ## Building
 
 ```
-make build
+sudo make build
 ```
 
 Then look in dist folder for `LifeboatLinux.efi`
