@@ -1,0 +1,35 @@
+# Change keyboard keymap
+
+```
+loadkeys es
+```
+
+# Change font size
+
+
+```
+setfont ter-118b
+setfont ter-128b
+setfont ter-132b
+```
+
+To see al available fonts see `/usr/share/consolefonts`
+
+# Mount luks encrypted data
+
+```
+cryptsetup open /dev/nvme0n1p2 recovery --type luks
+vgscan
+lvdisplay
+vgchange -ay ArchVolGroup
+mount /dev/mapper/recovery-root /mnt
+```
+
+To close it
+
+```
+umount /mnt
+vgchange -an ArchVolGroup
+cryptsetup close recovery
+```
+
