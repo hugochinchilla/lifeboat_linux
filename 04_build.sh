@@ -33,7 +33,7 @@ echo "  | /\`\_\`>  <_/\`\ | "
 echo "  | \__/'---'\__/ | "
 echo "  |_______________| "
 echo "                    "
-echo "   LifeBoatLinux.efi  "
+echo "   LifeboatLinux.efi  "
 
 ##########################
 # Checking root filesystem
