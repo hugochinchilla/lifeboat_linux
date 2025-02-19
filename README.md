@@ -26,6 +26,17 @@ This distro can be used to access your filesystem and perform basic tasks as edi
 
 Networking is untested.
 
+**What's included?:**
+
+- parted
+- filesystems: ext4, ext3, dos.
+- lvm2
+- e2fsprogs
+- mdadm
+- dmraid
+- dm-crypt
+- cryptsetup
+
 
 ## Building
 
