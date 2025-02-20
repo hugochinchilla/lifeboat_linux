@@ -22,6 +22,7 @@ build: clean prepare configure
 clean:
 	rm -rf build/alpine-minirootfs*
 	rm -rf build/linux*
+	rm -f build/config.initramfs_root
 
 .PHONY: test
 test:
