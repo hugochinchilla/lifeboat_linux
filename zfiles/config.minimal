@@ -22,9 +22,10 @@ CONFIG_CRYPTO_SHA256=y
 CONFIG_FB=y
 CONFIG_FB_EFI=y
 CONFIG_FRAMEBUFFER_CONSOLE=y
-CONFIG_FB_VESA=y
-CONFIG_FB_VGA16=y
 
+# Seems that are not needed if DMR is enabled
+#CONFIG_FB_VESA=y
+#CONFIG_FB_VGA16=y
 
 # https://wiki.gentoo.org/wiki/Framebuffer
 CONFIG_DRM=y
