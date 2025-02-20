@@ -8,7 +8,7 @@ CONFIG_MODULE_DECOMPRESS=y
 CONFIG_DEFAULT_HOSTNAME="lifeboat"
 
 CONFIG_CMDLINE_BOOL=y
-CONFIG_CMDLINE="ipv6.disable=1 mitigations=off noresume nomodeset"
+CONFIG_CMDLINE="ipv6.disable=1 mitigations=off noresume"
 
 # Enable NVME support
 CONFIG_BLK_DEV_NVME=y
@@ -22,3 +22,11 @@ CONFIG_CRYPTO_SHA256=y
 CONFIG_FB=y
 CONFIG_FB_EFI=y
 CONFIG_FRAMEBUFFER_CONSOLE=y
+CONFIG_FB_VESA=y
+CONFIG_FB_VGA16=y
+
+
+# https://wiki.gentoo.org/wiki/Framebuffer
+CONFIG_DRM=y
+CONFIG_DRM_FBDEV_EMULATION=y
+CONFIG_DRM_FBDEV_OVERALLOC=100
