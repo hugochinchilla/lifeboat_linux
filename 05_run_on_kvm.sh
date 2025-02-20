@@ -6,4 +6,4 @@ qemu-system-x86_64 -m 1G -enable-kvm \
     -drive if=pflash,format=raw,file=/usr/share/edk2/x64/OVMF_VARS.4m.fd \
     -kernel dist/LifeboatLinux.efi \
     -vga qxl \
-    -display gtk,show-cursor=on
+    -display gtk,show-cursor=on "$@"
