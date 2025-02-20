@@ -10,5 +10,15 @@
      ~;/     \;~
 
 
-There is a README in the current dir with some helpful snippets
+If the fonts are rendering tiny on your screen try loading bigger fonts:
+
+ $ setfont ter-132b
+
+There are more sizes available, try `ter-118b` or `ter-128b`.
+
+Load a custom keymap with `loadkeys <locale>`:
+
+ $ loadkeys es
+
+There is a README in the current dir with some helpful snippets and more information.
 
