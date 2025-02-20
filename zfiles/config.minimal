@@ -8,7 +8,7 @@ CONFIG_MODULE_DECOMPRESS=y
 CONFIG_DEFAULT_HOSTNAME="lifeboat"
 
 CONFIG_CMDLINE_BOOL=y
-CONFIG_CMDLINE="ipv6.disable=1 mitigations=off noresume"
+CONFIG_CMDLINE="ipv6.disable=1 mitigations=off noresume nomodeset"
 
 # Enable NVME support
 CONFIG_BLK_DEV_NVME=y
