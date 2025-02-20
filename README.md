@@ -9,9 +9,9 @@ Live linux distro combined in one ~35MB file. Runs as a EFI binary so it should 
 
 ## Motivation
 
-Sometimes I mess my setup and need to use a live USB to be able to access my filesistem and edit some config file to bring it back to life.
+Sometimes I mess my computer and need to use a live USB to be able to access my filesystem and edit some config file to bring it back to life.
 
-I was inspired by [OneFileLinux](https://github.com/zhovner/OneFileLinux) to create a minimal rescue system based on that idea
+I was inspired by [OneFileLinux](https://github.com/zhovner/OneFileLinux) to create a minimal rescue system based on that idea so I don't need a live USB anymore. 
 
 
 **Acknowledgments:**
