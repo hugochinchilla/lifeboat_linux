@@ -18,16 +18,28 @@ CONFIG_DM_CRYPT=y
 CONFIG_CRYPTO_XTS=y
 CONFIG_CRYPTO_SHA256=y
 
-# Enable tty on framebuffer
+
+## VIDEO SECTION
+#
+# Just trying to figure out the minimal things needed to make video work
+# on all possible hosts. I'm limited to testing on a virtual machine, my
+# desktop and my laptop, so it may not work for you.
+#
+# For each case between parenthesis I'm keeping the output from `dmesg | grep fb`
+# to understand what each system is making use of.
+
+# These alone enables video on my laptop with intel graphics (i915drmfb),
+# but is not enough for VM or my desktop with nvidia card.
+CONFIG_DRM=y
+CONFIG_DRM_FBDEV_EMULATION=y
+CONFIG_DRM_FBDEV_OVERALLOC=100
+
+# These enable video on the virtual machine and my desktop (efib).
 CONFIG_FB=y
 CONFIG_FB_EFI=y
 CONFIG_FRAMEBUFFER_CONSOLE=y
 
-# Seems that are not needed if DMR is enabled
+# I did not need them on the VM nor my desktop, but will not cause harm if
+# enabled and will probably help support more systems.
 #CONFIG_FB_VESA=y
 #CONFIG_FB_VGA16=y
-
-# https://wiki.gentoo.org/wiki/Framebuffer
-CONFIG_DRM=y
-CONFIG_DRM_FBDEV_EMULATION=y
-CONFIG_DRM_FBDEV_OVERALLOC=100

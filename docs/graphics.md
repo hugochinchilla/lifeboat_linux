@@ -15,6 +15,13 @@ CONFIG_FB_VGA16=y
 CONFIG_FB_VESA=y
 ```
 
+## EFI Framebuffer
+
+> This is a generic EFI platform driver for systems with UEFI firmware. The system must be booted via the EFI stub for this to be usable. efifb supports both firmware with Graphics Output Protocol (GOP) displays as well as older systems with only Universal Graphics Adapter (UGA) displays.
+> 
+> https://docs.kernel.org/fb/efifb.html
+
+
 ## SimpleDRM
 
 
