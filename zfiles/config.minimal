@@ -42,15 +42,11 @@ CONFIG_SYSFB_SIMPLEFB=y
 # Disable intel driver as SimpleDRM works too (saves 2Mb)
 CONFIG_DRM_I915=n
 
-# These enable video on the virtual machine and my desktop (efifb).
-# Also works on inel if I disable CONFIG_DRM_I915, otherwise we get stuck on firmware boot screen
+# These provide video support trough frambuffer (efifb) when DRM is not enabled.
 CONFIG_FB=y
 CONFIG_FB_EFI=y
 CONFIG_FRAMEBUFFER_CONSOLE=y
 
-# I did not need them on the VM nor my desktop, but will not cause harm if
-# enabled and will probably help support more systems.
-# Probably CONFIG_FB_EFI is enough for a EFI only system... I will judge after
-# seeing how much space it takes enabling these vs not doing it.
+# Will probably help support more systems. The space gains from removing them are not worth the risk
 CONFIG_FB_VESA=y
 CONFIG_FB_VGA16=y
