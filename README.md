@@ -28,7 +28,7 @@ To login in the system enter with `root` and no password.
 
 This distro can be used to access your filesystem and perform basic tasks as edit config files. It can be also handy to resize partitions.
 
-Networking is untested.
+Networking is untested, cable should probably work, wireless support is not added because it needs too many drivers and firmwares, maybe some day I will make an extended variant with wireless support.
 
 **What's included?:**
 
