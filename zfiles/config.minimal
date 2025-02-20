@@ -34,10 +34,17 @@ CONFIG_DRM=y
 CONFIG_DRM_FBDEV_EMULATION=y
 CONFIG_DRM_FBDEV_OVERALLOC=100
 
-# These enable video on the virtual machine and my desktop (efib).
-CONFIG_FB=y
-CONFIG_FB_EFI=y
-CONFIG_FRAMEBUFFER_CONSOLE=y
+# Simple DRM
+# This makes the VM and desktop select (simple-frambuffer) over (efifb).
+# The laptop still uses (i915drmfb) as it's baked into the kernel by default (CONFIG_DRM_I915)
+CONFIG_DRM_SIMPLEDRM=y
+CONFIG_SYSFB_SIMPLEFB=y
+
+
+# These enable video on the virtual machine and my desktop (efifb).
+#CONFIG_FB=y
+#CONFIG_FB_EFI=y
+#CONFIG_FRAMEBUFFER_CONSOLE=y
 
 # I did not need them on the VM nor my desktop, but will not cause harm if
 # enabled and will probably help support more systems.
