@@ -39,6 +39,8 @@ CONFIG_DRM_FBDEV_OVERALLOC=100
 # The laptop still uses (i915drmfb) as it's baked into the kernel by default (CONFIG_DRM_I915)
 CONFIG_DRM_SIMPLEDRM=y
 CONFIG_SYSFB_SIMPLEFB=y
+# Disable intel driver as SimpleDRM works too (saves 2Mb)
+CONFIG_DRM_I915=n
 
 # These enable video on the virtual machine and my desktop (efifb).
 # Also works on inel if I disable CONFIG_DRM_I915, otherwise we get stuck on firmware boot screen
