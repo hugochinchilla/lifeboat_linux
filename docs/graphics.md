@@ -53,11 +53,8 @@ When I started this project I knew nothing about how display modes work on Linux
 **fbdev is deprecated** (is fbdev the same as frambuffer? IDK)
 https://lkml.iu.edu/hypermail/linux/kernel/1509.3/00253.html
 
+As per wikipedia, fbdev is the same as Framebuffer and is superseeded by DRM. [Source](https://en.wikipedia.org/wiki/Linux_framebuffer)
 
-[This answer on stack overflow](https://lkml.iu.edu/hypermail/linux/kernel/1509.3/00253.html) gives some context, but then also talsk about KMS merging framebuffers and DRM, so I guess framebuffers and fbdev is not the same thing after all. IDK.
-
-
-https://unix.stackexchange.com/a/139249/319353
 
 ## Gentoo on graphic modes
 
