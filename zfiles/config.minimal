@@ -30,25 +30,25 @@ CONFIG_CRYPTO_SHA256=y
 
 # These alone enables video on my laptop with intel graphics (i915drmfb),
 # but is not enough for VM or my desktop with nvidia card.
-#CONFIG_DRM=y
-#CONFIG_DRM_FBDEV_EMULATION=y
-#CONFIG_DRM_FBDEV_OVERALLOC=100
+CONFIG_DRM=y
+CONFIG_DRM_FBDEV_EMULATION=y
+CONFIG_DRM_FBDEV_OVERALLOC=100
 
 # Simple DRM
 # This makes the VM and desktop select (simple-frambuffer) over (efifb).
 # The laptop still uses (i915drmfb) as it's baked into the kernel by default (CONFIG_DRM_I915)
-#CONFIG_DRM_SIMPLEDRM=y
-#CONFIG_SYSFB_SIMPLEFB=y
-
+CONFIG_DRM_SIMPLEDRM=y
+CONFIG_SYSFB_SIMPLEFB=y
 
 # These enable video on the virtual machine and my desktop (efifb).
+# Also works on inel if I disable CONFIG_DRM_I915, otherwise we get stuck on firmware boot screen
 CONFIG_FB=y
 CONFIG_FB_EFI=y
 CONFIG_FRAMEBUFFER_CONSOLE=y
-# disable default DRM support on intel or we get stuck in the firmware boot screen
-CONFIG_DRM_I915=n
 
 # I did not need them on the VM nor my desktop, but will not cause harm if
 # enabled and will probably help support more systems.
-#CONFIG_FB_VESA=y
-#CONFIG_FB_VGA16=y
+# Probably CONFIG_FB_EFI is enough for a EFI only system... I will judge after
+# seeing how much space it takes enabling these vs not doing it.
+CONFIG_FB_VESA=y
+CONFIG_FB_VGA16=y
