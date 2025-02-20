@@ -38,6 +38,13 @@ The option `SYSFB_SIMPLEFB` mentioned above is actually `CONFIG_SYSFB_SIMPLEFB`,
 > https://cateee.net/lkddb/web-lkddb/SYSFB_SIMPLEFB.html
 
 
+## Gentoo on graphic modes
+
+The info in this page was very helpful
+
+https://wiki.gentoo.org/wiki/Framebuffer
+
+
 ## Related kernel parameters
 
 https://docs.kernel.org/admin-guide/kernel-parameters.html
