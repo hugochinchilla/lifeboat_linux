@@ -16,6 +16,7 @@ export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 apk update
 apk upgrade
 apk add openrc nano vim bash parted dropbear dropbear-ssh efibootmgr \
+    docs \
     lvm2 cryptsetup e2fsprogs e2fsprogs-extra dosfstools \
     dmraid mdadm fuse gawk grep sed util-linux wget curl rsync \
     xfsprogs btrfs-progs \
