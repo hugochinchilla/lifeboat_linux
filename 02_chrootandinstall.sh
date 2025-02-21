@@ -23,9 +23,6 @@ apk add openrc nano vim bash parted dropbear dropbear-ssh efibootmgr \
     unzip tar zstd font-terminus kbd
     # libc6-compat syslinux htop gpg eudev util-linux pciutils usbutils coreutils
 
-# markdown reader
-apk add mdp --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing
-
 rm /var/cache/apk/*
 
 exit
