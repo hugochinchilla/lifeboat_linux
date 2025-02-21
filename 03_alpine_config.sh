@@ -20,8 +20,9 @@ chmod +x ./build/alpine-minirootfs/init
 # Enamble serial console
 #sed -i 's/^#ttyS0/ttyS0/' ./build/alpine-minirootfs/etc/inittab
 
-cat ./zfiles/README > ./build/alpine-minirootfs/root/README
+mkdir -p build/alpine-minirootfs/lib/modules
 cat ./zfiles/motd > ./build/alpine-minirootfs/etc/motd
 
-mkdir -p build/alpine-minirootfs/lib/modules
+cp ./zfiles/README ./build/alpine-minirootfs/root/
+cp -r ./zfiles/resources ./build/alpine-minirootfs/root/
 
