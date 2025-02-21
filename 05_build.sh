@@ -55,6 +55,7 @@ if [ -f $SHELLHISTORY ]; then
 fi
 
 # Clearing kernel modules folder 
+mkdir -p $MODULESPATH
 if [ "$(ls -A $MODULESPATH)" ]; then 
     echo -e "Kernel modules folder is not empty: $MODULESPATH \nRemoving modules...\n"
     rm -r $MODULESPATH*
