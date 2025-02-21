@@ -34,9 +34,8 @@ Networking is untested, cable should probably work, wireless support is not adde
 
 - parted
 - efibootmgr
-- filesystems: ext4, ext3, dos.
+- filesystems: ext4, ext3, btrfs, xfs, dos and their related utilities.
 - lvm2
-- e2fsprogs
 - mdadm
 - dmraid
 - dm-crypt
