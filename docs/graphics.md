@@ -97,7 +97,7 @@ https://docs.kernel.org/admin-guide/kernel-parameters.html
 
         vga=ask
 
-            Seems to have no effect unles booting in legacy BIOS mode
+            Seems to have no effect unless booting in legacy BIOS mode
 
 
 
