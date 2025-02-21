@@ -18,6 +18,7 @@ apk upgrade
 apk add openrc nano vim bash parted dropbear dropbear-ssh efibootmgr \
     lvm2 cryptsetup e2fsprogs e2fsprogs-extra dosfstools \
     dmraid mdadm fuse gawk grep sed util-linux wget curl rsync \
+    xfsprogs btrfs-progs \
     unzip tar zstd font-terminus kbd
     # libc6-compat syslinux htop gpg eudev util-linux pciutils usbutils coreutils
 rm /var/cache/apk/*
