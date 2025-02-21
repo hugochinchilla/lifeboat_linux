@@ -15,12 +15,13 @@ export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
 apk update
 apk upgrade
-apk add openrc nano vim bash parted efibootmgr \
-    lvm2 cryptsetup e2fsprogs e2fsprogs-extra dosfstools \
-    dmraid mdadm fuse gawk grep sed util-linux \
-    xfsprogs btrfs-progs \
-    unzip tar zstd font-terminus kbd
-    # libc6-compat syslinux htop gpg eudev util-linux pciutils usbutils coreutils
+
+apk add openrc bash gawk grep sed util-linux unzip tar zstd \
+    font-terminus kbd \
+    nano vim \
+    parted efibootmgr \
+    lvm2 cryptsetup dmraid mdadm \
+    e2fsprogs e2fsprogs-extra dosfstools xfsprogs btrfs-progs
 
 apk add mandoc \
     parted-doc efibootmgr-doc dmraid-doc mdadm-doc lvm2-doc cryptsetup-doc \
