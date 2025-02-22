@@ -6,7 +6,7 @@ echo "$HOSTNAME" > build/alpine-minirootfs/etc/hostname
 echo "127.0.0.1     $HOSTNAME   $HOSTNAME" >> build/alpine-minirootfs/etc/hosts
 
 # Enable services
-#ln -fs /etc/init.d/mdev ./build/alpine-minirootfs/etc/runlevels/sysinit/mdev
+ln -fs /etc/init.d/mdev ./build/alpine-minirootfs/etc/runlevels/sysinit/mdev
 ln -fs /etc/init.d/devfs ./build/alpine-minirootfs/etc/runlevels/sysinit/devfs
 ln -fs /etc/init.d/dmesg ./build/alpine-minirootfs/etc/runlevels/sysinit/dmesg
 ln -fs /etc/init.d/syslog ./build/alpine-minirootfs/etc/runlevels/sysinit/syslog
