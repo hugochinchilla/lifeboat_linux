@@ -15,7 +15,7 @@ menuconfig:
 	cd build/linux && make nconfig
 
 .PHONY: build
-build: clean prepare configure
+build: prepare configure
 	./05_build.sh
 
 .PHONY: clean
