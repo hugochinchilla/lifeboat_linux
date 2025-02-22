@@ -10,7 +10,9 @@ export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 apk update
 apk upgrade
 
-apk add openrc bash gawk grep sed util-linux unzip tar zstd \
+apk add \
+    openrc busybox-openrc \
+    bash gawk grep sed util-linux unzip tar zstd \
     font-terminus kbd \
     nano vim \
     parted efibootmgr \
