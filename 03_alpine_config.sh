@@ -14,10 +14,10 @@ ln -fs /etc/init.d/hwdrivers ./build/alpine-minirootfs/etc/runlevels/sysinit/hwd
 ln -fs /etc/init.d/networking ./build/alpine-minirootfs/etc/runlevels/sysinit/networking
 
 # Copy customized config files
-cat ./zfiles/interfaces > ./build/alpine-minirootfs/etc/network/interfaces
-cat ./zfiles/profile > ./build/alpine-minirootfs/etc/profile
 cat ./zfiles/shadow > ./build/alpine-minirootfs/etc/shadow
 cat ./zfiles/inittab > ./build/alpine-minirootfs/inittab
+cat ./zfiles/interfaces > ./build/alpine-minirootfs/etc/network/interfaces
+cat ./zfiles/profile > ./build/alpine-minirootfs/etc/profile
 cat ./zfiles/motd > ./build/alpine-minirootfs/etc/motd
 
 # Init process
