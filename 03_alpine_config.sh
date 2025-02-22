@@ -13,15 +13,14 @@ cat ./zfiles/interfaces > ./build/alpine-minirootfs/etc/network/interfaces
 cat ./zfiles/resolv.conf > ./build/alpine-minirootfs/etc/resolv.conf
 cat ./zfiles/profile > ./build/alpine-minirootfs/etc/profile
 cat ./zfiles/shadow > ./build/alpine-minirootfs/etc/shadow
-cat ./zfiles/init > ./build/alpine-minirootfs/init
-
-chmod +x ./build/alpine-minirootfs/init
-
-# Enamble serial console
-#sed -i 's/^#ttyS0/ttyS0/' ./build/alpine-minirootfs/etc/inittab
-
+cat ./zfiles/inittab > ./build/alpine-minirootfs/inittab
 cat ./zfiles/motd > ./build/alpine-minirootfs/etc/motd
 
+# Init process
+cat ./zfiles/init > ./build/alpine-minirootfs/init
+chmod +x ./build/alpine-minirootfs/init
+
+# Resources for the user
 cp ./zfiles/README ./build/alpine-minirootfs/root/
 cp -r ./zfiles/resources ./build/alpine-minirootfs/root/
 
