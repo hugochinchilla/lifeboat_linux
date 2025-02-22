@@ -10,7 +10,7 @@ EOF
 echo "$HOSTNAME" > build/alpine-minirootfs/etc/hostname
 echo "127.0.0.1     $HOSTNAME   $HOSTNAME" >> build/alpine-minirootfs/etc/hosts
 
-cat > build/alpine-minirootfs/mk.sh << EOF
+unshare -mr chroot build/alpine-minirootfs /bin/ash <<'EOF'
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 
 apk update
@@ -31,11 +31,4 @@ rm /var/cache/apk/*
 
 # Make vim weight less on the final image
 rm -rf /usr/share/vim/*/doc/*
-
-exit
 EOF
-
-chmod +x build/alpine-minirootfs/mk.sh
-
-unshare -mr chroot build/alpine-minirootfs /bin/ash /mk.sh
-rm build/alpine-minirootfs/mk.sh
