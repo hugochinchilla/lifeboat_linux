@@ -68,6 +68,18 @@ if [ -e $DEVURANDOM ]; then
     rm $DEVURANDOM
 fi
 
+## Check if console character file exist
+if [ -d $DEVCONSOLE ]; then # Check that console device is not a folder
+    rm -rf $DEVCONSOLE
+fi
+if [ -f $DEVCONSOLE ]; then # Check that console device is not a regular file
+    rm -rf $DEVCONSOLE
+fi
+if [ ! -e $DEVCONSOLE ]; then
+    echo -e "Creating console device at $DEVCONSOLE \n"
+    fakeroot mknod -m 600 $DEVCONSOLE c 5 1
+fi
+
 # Print rootfs uncompressed size
 echo -e "Uncompressed root filesystem size WITHOUT kernel modules: $(du -sh $ROOTFS | cut -f1)\n"
 
