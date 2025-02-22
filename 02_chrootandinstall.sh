@@ -1,14 +1,8 @@
 #!/bin/bash
-HOSTNAME=lifeboat
 
-cat > build/alpine-minirootfs/etc/resolv.conf << EOF
-nameserver 1.1.1.1
-nameserver 8.8.4.4
-EOF
+# Need resolv.conf at this step to be able to run apk
+cat zfiles/resolv.conf > build/alpine-minirootfs/etc/resolv.conf
 
-
-echo "$HOSTNAME" > build/alpine-minirootfs/etc/hostname
-echo "127.0.0.1     $HOSTNAME   $HOSTNAME" >> build/alpine-minirootfs/etc/hosts
 
 unshare -mr chroot build/alpine-minirootfs /bin/ash <<'EOF'
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin

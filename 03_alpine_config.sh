@@ -1,5 +1,11 @@
 #/bin/bash
 
+# Configure hostname
+HOSTNAME=lifeboat
+echo "$HOSTNAME" > build/alpine-minirootfs/etc/hostname
+echo "127.0.0.1     $HOSTNAME   $HOSTNAME" >> build/alpine-minirootfs/etc/hosts
+
+# Enable services
 ln -fs /etc/init.d/mdev ./build/alpine-minirootfs/etc/runlevels/sysinit/mdev
 ln -fs /etc/init.d/devfs ./build/alpine-minirootfs/etc/runlevels/sysinit/devfs
 ln -fs /etc/init.d/dmesg ./build/alpine-minirootfs/etc/runlevels/sysinit/dmesg
@@ -9,8 +15,8 @@ ln -fs /etc/init.d/networking ./build/alpine-minirootfs/etc/runlevels/sysinit/ne
 
 ln -fs /sbin/agetty ./build/alpine-minirootfs/sbin/getty
 
+# Copy customized config files
 cat ./zfiles/interfaces > ./build/alpine-minirootfs/etc/network/interfaces
-cat ./zfiles/resolv.conf > ./build/alpine-minirootfs/etc/resolv.conf
 cat ./zfiles/profile > ./build/alpine-minirootfs/etc/profile
 cat ./zfiles/shadow > ./build/alpine-minirootfs/etc/shadow
 cat ./zfiles/inittab > ./build/alpine-minirootfs/inittab
