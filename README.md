@@ -45,10 +45,17 @@ Cabled networking is supported, wireless support is not due to the need to add t
 ## Building
 
 ```
-make build
+make clean build
 ```
 
-Then look in dist folder for `LifeboatLinux.efi`
+The look in dist folder for `LifeboatLinux.efi`
+
+
+**Incremental builds**
+
+Incremental buils are possible for quick iterations but are prone to contamination by the previous build process. Just do `make build`.
+
+Depending on what you are trying to do you may need to make some manual cleanup first on the rootfs dir, if you know what you are doing it will probably be ok for testing, but always prefer a clean build for final use.
 
 
 ## Installing
