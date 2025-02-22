@@ -15,7 +15,7 @@ ln -fs /etc/init.d/networking ./build/alpine-minirootfs/etc/runlevels/sysinit/ne
 
 # Copy customized config files
 cat ./zfiles/shadow > ./build/alpine-minirootfs/etc/shadow
-cat ./zfiles/inittab > ./build/alpine-minirootfs/inittab
+cat ./zfiles/inittab > ./build/alpine-minirootfs/etc/inittab
 cat ./zfiles/interfaces > ./build/alpine-minirootfs/etc/network/interfaces
 cat ./zfiles/profile > ./build/alpine-minirootfs/etc/profile
 cat ./zfiles/motd > ./build/alpine-minirootfs/etc/motd
