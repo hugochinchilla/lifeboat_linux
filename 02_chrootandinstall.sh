@@ -11,7 +11,7 @@ apk update
 apk upgrade
 
 apk add \
-    openrc busybox-openrc busybox-mdev-openrc \
+    openrc busybox-openrc busybox-mdev-openrc haveged \
     bash gawk grep sed util-linux unzip tar zstd \
     font-terminus kbd \
     nano vim \
