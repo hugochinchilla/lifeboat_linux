@@ -4,12 +4,12 @@
 ::sysinit:/sbin/openrc boot
 ::wait:/sbin/openrc default
 
-tty1::respawn:/sbin/agetty 38400 tty1
-tty2::respawn:/sbin/agetty 38400 tty2
-tty3::respawn:/sbin/agetty 38400 tty3
-tty4::respawn:/sbin/agetty 38400 tty4
-tty5::respawn:/sbin/agetty 38400 tty5
-tty6::respawn:/sbin/agetty 38400 tty6
+tty1::respawn:/sbin/agetty --autologin root tty1 linux
+tty2::respawn:/sbin/agetty --autologin root tty2 linux
+tty3::respawn:/sbin/agetty --autologin root tty3 linux
+tty4::respawn:/sbin/agetty --autologin root tty4 linux
+tty5::respawn:/sbin/agetty --autologin root tty5 linux
+tty6::respawn:/sbin/agetty --autologin root tty6 linux
 
 # Put a tty on the serial port
 #ttyS0::respawn:/sbin/agetty -L 115200 ttyS0 vt100
