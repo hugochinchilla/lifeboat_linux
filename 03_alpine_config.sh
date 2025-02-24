@@ -33,3 +33,5 @@ chmod +x ./build/alpine-minirootfs/init
 cp ./zfiles/README ./build/alpine-minirootfs/root/
 cp -r ./zfiles/resources ./build/alpine-minirootfs/root/
 
+# create login.defs to avoid errors
+touch ./build/alpine-minirootfs/etc/login.defs
