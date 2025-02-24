@@ -9,3 +9,7 @@ for script in /etc/profile.d/*.sh ; do
                 . $script
         fi
 done
+
+if [ -f /root/UserScripts/init ]; then
+        . /root/UserScripts/init
+fi

@@ -61,3 +61,11 @@ Depending on what you are trying to do you may need to make some manual cleanup 
 ## Installing
 
 Get the EFI file (or build it) and drop it in your EFI folder. If using secure boot remember to sign it. I won't cover how to add it to your bootloader because there are many possible setups to cover it here.
+
+## User customization
+
+You can place a directory in your ESP partition with custom scripts, notes, or whatever you want.
+
+Place custom resources on `(ESP partition)/EFI/Boot/Lifeboat/UserScripts`.
+
+If you create a special file named `init` this file will be executed by the shell on login, you can use it to customize the keyboard layout, font-size, set custom shell aliases, etc.

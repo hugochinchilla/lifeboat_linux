@@ -12,7 +12,7 @@ apk upgrade
 
 apk add \
     openrc busybox-openrc busybox-mdev-openrc haveged \
-    bash gawk grep sed util-linux unzip tar zstd \
+    bash gawk grep sed util-linux unzip tar zstd mtools \
     font-terminus kbd \
     nano vim \
     parted efibootmgr \

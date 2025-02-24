@@ -1,0 +1,26 @@
+#!/sbin/openrc-run
+description="Loads userscripts in EFI partition into /root"
+name="Lifeboat user scripts"
+
+depend() {
+    need localmount
+    after hwdrivers modules
+}
+
+
+start() {
+    efi_partitions=$(lsblk -l -n -o PATH,FSTYPE | grep -i "\(fat32\|fat16\|vfat\|EFI\)" | awk '{print $1}')
+    for partition in $efi_partitions; do
+        if mdir -i $partition ::/EFI/BOOT/Lifeboat/UserScripts; then
+            mcopy -i $partition ::/EFI/BOOT/Lifeboat/UserScripts /root/UserScripts
+            # scripts from FAT partitions do not have executable bit set
+            chmod +x /root/UserScripts/*.sh
+            return 0
+        fi
+    done
+}
+
+stop() {
+    # nothing to undo
+    return 0
+}
