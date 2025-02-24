@@ -20,6 +20,7 @@ apk add \
     e2fsprogs e2fsprogs-extra dosfstools xfsprogs btrfs-progs
 
 apk add mandoc \
+    util-linux-doc \
     parted-doc efibootmgr-doc dmraid-doc mdadm-doc lvm2-doc cryptsetup-doc \
     e2fsprogs-doc dosfstools-doc xfsprogs-doc btrfs-progs-doc
 
