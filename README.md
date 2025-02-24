@@ -40,6 +40,8 @@ Cabled networking is supported, wireless support is not due to the need to add t
 - dmraid
 - dm-crypt
 - cryptsetup
+- gptfdisk
+- fdisk
 
 
 ## Building
