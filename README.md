@@ -20,10 +20,6 @@ I was inspired by [OneFileLinux](https://github.com/zhovner/OneFileLinux) to cre
 - [D4rk4](https://github.com/D4rk4/OneRecovery) for it's OneFileLinux fork with updated kernel and alpine versions.
 
 
-## Login
-
-To login in the system enter with `root` and no password.
-
 ## What to expect
 
 This distro can be used to access your filesystem and perform basic tasks as edit config files. It can be also handy to resize partitions.
